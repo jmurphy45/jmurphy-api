@@ -113,5 +113,20 @@ class DatabaseSeeder extends Seeder
                 'state_id' => 50,
             ]);
         }
+
+        foreach (range(1,13) as $index) {
+            DB::table('clients')->insert([
+                'name' => $faker->company,
+            ]);
+        }
+
+        foreach (range(1,13) as $index) {
+            DB::table('works')->insert([
+                'title' => $faker->words(3, true)  ,
+                'body' => $faker->text(200),
+                'state_id' => 50,
+                'client_id' => 4,
+            ]);
+        }
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Education;
+use App\Work;
 use State;
 
-class EducationController extends Controller
+class WorkController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -18,13 +18,15 @@ class EducationController extends Controller
     }
 
     //
+
     public function index(){
-        $response = Education::all();
-        return responder()->success($response)->with('state')->respond();
+        $response = Work::all();
+        return responder()->success($response)->with('state','client')->respond();
     }
 
     public function edit($id){
-        $response = Education::find($id);
+        $response = Work::find($id);
         return responder()->success($response)->with('state')->respond();
     }
+
 }

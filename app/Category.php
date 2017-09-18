@@ -9,13 +9,9 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Education extends Model
+class Category extends Model
 {
 
-    protected $table = 'education';
+    protected $table = 'categories';
     //protected $hidden = ['state_id'];
-
-    public function state(){
-        return $this->belongsTo('App\State', 'state_id');
-    }
 }

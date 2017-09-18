@@ -9,13 +9,17 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Education extends Model
+class Work extends Model
 {
 
-    protected $table = 'education';
+    protected $table = 'works';
     //protected $hidden = ['state_id'];
 
     public function state(){
         return $this->belongsTo('App\State', 'state_id');
+    }
+
+    public function client(){
+        return $this->belongsTo('App\Client', 'client_id');
     }
 }

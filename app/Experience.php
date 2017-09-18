@@ -13,11 +13,11 @@ class Experience extends Model
 {
 
     protected $table = 'experiences';
-    protected $hidden = ['state_id'];
+    //protected $hidden = ['state_id'];
 
 
     public function state(){
-        return $this->belongsTo('App\State', 'id');
+        return $this->belongsTo('App\State', 'state_id');
     }
 
 }

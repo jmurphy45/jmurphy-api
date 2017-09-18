@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Experience;
 use State;
-use Flugg\Responder\Responder;
 
 class ExperienceController extends Controller
 {
@@ -20,7 +19,7 @@ class ExperienceController extends Controller
 
     //
 
-    public function index(Responder $responder){
+    public function index(){
         $response = Experience::all();
         //return response($response,200);
         return responder()->success($response)->with('state')->respond();
