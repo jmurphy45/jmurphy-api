@@ -9,15 +9,13 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Experience extends Model
+class Education extends Model
 {
 
-    protected $table = 'experiences';
+    protected $table = 'education';
     protected $hidden = ['state_id'];
-
 
     public function state(){
         return $this->belongsTo('App\State', 'id');
     }
-
 }

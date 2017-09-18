@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Experience;
+use App\Education;
 use State;
 use Flugg\Responder\Responder;
 
-class ExperienceController extends Controller
+class EducationController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -19,16 +19,13 @@ class ExperienceController extends Controller
     }
 
     //
-
     public function index(Responder $responder){
-        $response = Experience::all();
-        //return response($response,200);
+        $response = Education::all();
         return responder()->success($response)->with('state')->respond();
     }
 
     public function edit($id){
-        $response = Experience::find($id);
+        $response = Education::find($id);
         return responder()->success($response)->with('state')->respond();
     }
-
 }

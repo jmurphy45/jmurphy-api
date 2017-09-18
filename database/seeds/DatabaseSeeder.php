@@ -100,5 +100,18 @@ class DatabaseSeeder extends Seeder
                 'end_date' => $faker->dateTime(),
             ]);
         }
+
+
+        foreach (range(1,3) as $index) {
+            DB::table('education')->insert([
+                'school_name' => $faker->word,
+                'city' => $faker->city,
+                'degree' => $faker->jobTitle,
+                'area_of_study' => $faker->word,
+                'start_date' => $faker->dateTime(),
+                'end_date' => $faker->dateTime(),
+                'state_id' => 50,
+            ]);
+        }
     }
 }

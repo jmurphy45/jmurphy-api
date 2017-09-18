@@ -13,4 +13,5 @@ class State extends Model
 {
 
     protected $table = 'states';
+    protected $visible = ['name','code'];
 }

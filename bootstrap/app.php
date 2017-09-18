@@ -48,6 +48,11 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+$app->register(Flugg\Responder\ResponderServiceProvider::class);
+
+class_alias(Flugg\Responder\Facades\Responder::class, 'Responder');
+class_alias(Flugg\Responder\Facades\Transformer::class, 'Transformer');
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
