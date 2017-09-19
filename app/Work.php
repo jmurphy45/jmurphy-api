@@ -22,4 +22,22 @@ class Work extends Model
     public function client(){
         return $this->belongsTo('App\Client', 'client_id');
     }
+
+    public function tags(){
+        return  $this->hasMany('App\Tag', 'work_id');
+    }
+
+    public function work_tags(){
+        return $this->tags()->where('type', '=', 'work');
+    }
+
+
+    public function categories(){
+        return $this->hasMany('App\Category', 'work_id');
+    }
+
+    public function work_categories(){
+        return $this->categories()->where('type', '=', 'work');
+    }
+
 }

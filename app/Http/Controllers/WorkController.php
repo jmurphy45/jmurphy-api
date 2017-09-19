@@ -21,12 +21,12 @@ class WorkController extends Controller
 
     public function index(){
         $response = Work::all();
-        return responder()->success($response)->with('state','client')->respond();
+        return responder()->success($response)->with('state','client','work_tags','work_categories')->respond();
     }
 
     public function edit($id){
         $response = Work::find($id);
-        return responder()->success($response)->with('state')->respond();
+        return responder()->success($response)->with('state','client','work_tags','work_categories')->respond();
     }
 
 }

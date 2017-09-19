@@ -129,5 +129,30 @@ class DatabaseSeeder extends Seeder
                 'client_id' => 4,
             ]);
         }
+
+        foreach (range(1,13) as $index) {
+            DB::table('tags')->insert([
+                'name' => $faker->words(3, true)  ,
+                'type' => 'work',
+                'work_id' => 3,
+            ]);
+        }
+
+        foreach (range(1,13) as $index) {
+            DB::table('categories')->insert([
+                'name' => $faker->words(3, true),
+                'type' => 'work',
+                'work_id' => 4,
+            ]);
+        }
+
+        foreach (range(1,6) as $index) {
+            DB::table('works')->insert([
+                'title' => $faker->words(3, true),
+                'body' => $faker->text(200),
+                'state_id' => 50,
+                'client_id' => 4,
+            ]);
+        }
     }
 }

@@ -28,4 +28,10 @@ $router->get('clients', 'ClientController@index');
 $router->get('client/{id}', 'ClientController@edit');
 
 $router->get('works', 'WorkController@index');
-$router->get('work/{id}', 'WorkController@edit');
+$router->get('works/{id}', 'WorkController@edit');
+
+$router->get('tags', 'TagController@index');
+$router->get('tags/{id}', 'TagController@edit');
+
+$router->get('categories', 'TagController@index');
+$router->get('categories/{id}', 'TagController@edit');
