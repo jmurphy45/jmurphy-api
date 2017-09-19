@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Work;
-use State;
+use App\Client;
 
-class WorkController extends Controller
+
+class ClientController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,12 +20,12 @@ class WorkController extends Controller
     //
 
     public function index(){
-        $response = Work::all();
-        return responder()->success($response)->with('state','client')->respond();
+        $response = Client::all();
+        return responder()->success($response)->with('state')->respond();
     }
 
     public function edit($id){
-        $response = Work::find($id);
+        $response = Client::find($id);
         return responder()->success($response)->with('state')->respond();
     }
 

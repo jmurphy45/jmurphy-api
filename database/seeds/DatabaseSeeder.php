@@ -117,6 +117,7 @@ class DatabaseSeeder extends Seeder
         foreach (range(1,13) as $index) {
             DB::table('clients')->insert([
                 'name' => $faker->company,
+                'state_id' => 50,
             ]);
         }
 

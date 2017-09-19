@@ -24,5 +24,8 @@ $router->get('experience/{id}', 'ExperienceController@edit');
 $router->get('education', 'EducationController@index');
 $router->get('education/{id}', 'EducationController@edit');
 
+$router->get('clients', 'ClientController@index');
+$router->get('client/{id}', 'ClientController@edit');
+
 $router->get('works', 'WorkController@index');
 $router->get('work/{id}', 'WorkController@edit');

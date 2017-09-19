@@ -14,4 +14,5 @@ class State extends Model
 
     protected $table = 'states';
     protected $visible = ['name','code'];
+    protected $hidden = ['created_at','updated_at'];
 }

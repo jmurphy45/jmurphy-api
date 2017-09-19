@@ -13,5 +13,9 @@ class Client extends Model
 {
 
     protected $table = 'clients';
-    //protected $hidden = ['state_id'];
+    protected $hidden = ['state_id'];
+
+    public function state(){
+        return $this->belongsTo('App\State', 'state_id');
+    }
 }
