@@ -20,4 +20,9 @@ class Experience extends Model
         return $this->belongsTo('App\State', 'state_id');
     }
 
+    public function work_experiences()
+    {
+        return $this->hasManyThrough('App\Post', 'App\User');
+    }
+
 }
