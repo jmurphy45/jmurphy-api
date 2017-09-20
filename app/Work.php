@@ -13,7 +13,7 @@ class Work extends Model
 {
 
     protected $table = 'works';
-    //protected $hidden = ['state_id'];
+    protected $hidden = ['state_id'];
 
     public function state(){
         return $this->belongsTo('App\State', 'state_id');
@@ -37,7 +37,10 @@ class Work extends Model
     }
 
     public function work_categories(){
-        return $this->categories()->where('type', '=', 'work');
+        $states = new \App\State();
+        return $this->categories()->where('type', '=', 'work')->with($this->state());
     }
+
+
 
 }

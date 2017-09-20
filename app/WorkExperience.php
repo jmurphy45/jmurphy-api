@@ -9,7 +9,7 @@
 namespace App;
 use Illuminate\Database\Eloquent\Model;
 
-class Experience extends Model
+class WorkExperience extends Model
 {
 
     protected $table = 'work_experiences';

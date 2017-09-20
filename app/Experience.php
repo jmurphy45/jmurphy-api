@@ -22,7 +22,7 @@ class Experience extends Model
 
     public function work_experiences()
     {
-        return $this->hasManyThrough('App\Post', 'App\User');
+        return $this->hasManyThrough('App\Work', 'App\WorkExperience','work_id','id')->with('state');
     }
 
 }

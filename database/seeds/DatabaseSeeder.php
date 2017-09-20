@@ -154,5 +154,12 @@ class DatabaseSeeder extends Seeder
                 'client_id' => 4,
             ]);
         }
+
+        foreach (range(1,3) as $index) {
+            DB::table('work_experiences')->insert([
+                'work_id' => 1,
+                'experience_id' => 4,
+            ]);
+        }
     }
 }

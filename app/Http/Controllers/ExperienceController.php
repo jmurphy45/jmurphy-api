@@ -22,7 +22,7 @@ class ExperienceController extends Controller
     public function index(){
         $response = Experience::all();
         //return response($response,200);
-        return responder()->success($response)->with('state')->respond();
+        return responder()->success($response)->with('state','work_experiences')->respond();
     }
 
     public function edit($id){
