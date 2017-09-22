@@ -27,7 +27,7 @@ class ExperienceController extends Controller
 
     public function edit($id){
         $response = Experience::find($id);
-        return responder()->success($response)->with('state')->respond();
+        return responder()->success($response)->with('state', 'work_experiences')->respond();
     }
 
 }

@@ -13,6 +13,6 @@ class WorkExperience extends Model
 {
 
     protected $table = 'work_experiences';
-    //protected $hidden = ['state_id'];
+    protected $hidden = ['work_id'];
 
 }

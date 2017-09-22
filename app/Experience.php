@@ -13,7 +13,7 @@ class Experience extends Model
 {
 
     protected $table = 'experiences';
-    //protected $hidden = ['state_id'];
+    protected $hidden = ['work_id','state_id'];
 
 
     public function state(){
@@ -22,7 +22,12 @@ class Experience extends Model
 
     public function work_experiences()
     {
-        return $this->hasManyThrough('App\Work', 'App\WorkExperience','work_id','id')->with('state');
+        return $this->hasManyThrough('App\Work', 'App\WorkExperience',
+            'experience_id','id')->with('state','client');
+    }
+    public function client()
+    {
+        return $this->hasOne('App\Client');
     }
 
 }
