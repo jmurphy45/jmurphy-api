@@ -13,5 +13,5 @@ class Category extends Model
 {
 
     protected $table = 'categories';
-    //protected $hidden = ['state_id'];
+
 }

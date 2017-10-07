@@ -37,9 +37,11 @@ class Work extends Model
     }
 
     public function work_categories(){
-        return $this->categories()->where('type', '=', 'work')->with('state');
+        return $this->categories()->where('type', '=', 'work');
     }
 
-
+    public function work(){
+        return $this->belongsTo('App\Portfolio', 'work_id');
+    }
 
 }

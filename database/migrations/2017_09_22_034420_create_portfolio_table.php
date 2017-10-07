@@ -15,6 +15,10 @@ class CreatePortfolioTable extends Migration
     {
         Schema::create('portfolio', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('work_location');
+            $table->string('image_type');
+            $table->integer('work_id')->unsigned();
+            $table->foreign('work_id')->references('id')->on('works');
             $table->timestamps();
         });
     }

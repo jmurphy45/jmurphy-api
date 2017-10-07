@@ -17,6 +17,9 @@ class CreateWorksTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('body');
+            $table->string('square_img');
+            $table->string('portait_img');
+            $table->string('landscapre_img');
             $table->integer('state_id')->unsigned();
             $table->foreign('state_id')->references('id')->on('states');
             $table->integer('client_id')->unsigned();

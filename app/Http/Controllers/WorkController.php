@@ -29,4 +29,9 @@ class WorkController extends Controller
         return responder()->success($response)->with('state','client','work_tags','work_categories')->respond();
     }
 
+    public function latest($num){
+        $response = Work::orderBy('created_at', 'desc')->take($num);
+        return responder()->success($response)->with('state','client','work_tags','work_categories')->respond();
+    }
+
 }
