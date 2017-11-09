@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert(['api_token' => 'N1RTRrbM5J3Fa8sVwlZMxhdLUv4MGODi']);
+
         //DB::table('states')->truncate();
         State::create(['name' => 'Alaska', 'code' => 'AK']);
         State::create(['name' => 'Alabama', 'code' => 'AL']);

@@ -40,3 +40,5 @@ $router->get('categories', 'TagController@index');
 $router->get('categories/{id}', 'TagController@edit');
 
 $router->get('portfolio', 'PortfolioController@index');
+
+$router->post('email', 'MailController@store');

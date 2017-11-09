@@ -22,7 +22,7 @@ class PortfolioController extends Controller
     //
 
     public function index(){
-        $response = Portfolio::all();
+        $response = Portfolio::all()->take(9);
         return responder()->success($response)->with('work')->respond();
     }
 
